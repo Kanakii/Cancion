@@ -1,0 +1,76 @@
+
+ body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  radial-gradient(#f745ef 0.5px, transparent 0.5px), radial-gradient(#f745ef 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+} 
+
+.heart{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #ff4757;
+    transform: rotate(45deg);
+    box-shadow: -20px 20px 150px #ff4757;
+    animation: palpitar 0.5s linear infinite alternate;
+}
+@keyframes palpitar {
+    0%{transform: rotate(45deg) scale(1.10);}
+    80%{transform: rotate(45deg) scale(1.0);}
+    100%{transform: rotate(45deg) scale(0.8);}
+}
+.heart::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #ff4757;
+    right: 50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #ff4757 ;
+}
+
+.heart::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    background: #ff4757;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #ff4757 ;
+}
+
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+ img{
+    margin-top: 2em;
+    margin-left:2em;
+    width: 20em;
+    height: 20em;
+}
+
+.boton{
+text-align: center;
+margin-top: 2em;
+}
+
+ .boton__boton{
+    border: 1px solid black;
+    border-radius: 1em;
+    width: 5em;
+    height: 2em;
+    font-size: 1.5em;
+}  
+
+.mover{
+    display: flex;
+    justify-content: center;
+    margin-top: 6em;
+}
